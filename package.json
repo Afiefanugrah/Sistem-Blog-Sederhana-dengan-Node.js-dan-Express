@@ -1,0 +1,19 @@
+{
+  "name": "sistem-blog-sederhana-dengan-node.js-dan-express",
+  "version": "1.0.0",
+  "description": "Sistem Blog Sederhana dengan Node.js dan Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "express"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afiefanugrah/Sistem-Blog-Sederhana-dengan-Node.js-dan-Express.git"
+  },
+  "author": "M. Afief Anugrah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Afiefanugrah/Sistem-Blog-Sederhana-dengan-Node.js-dan-Express/issues"
+  },
+  "homepage": "https://github.com/Afiefanugrah/Sistem-Blog-Sederhana-dengan-Node.js-dan-Express#readme"
+}
