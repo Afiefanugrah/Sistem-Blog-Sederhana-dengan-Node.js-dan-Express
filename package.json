@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Afiefanugrah/Sistem-Blog-Sederhana-dengan-Node.js-dan-Express/issues"
   },
-  "homepage": "https://github.com/Afiefanugrah/Sistem-Blog-Sederhana-dengan-Node.js-dan-Express#readme"
+  "homepage": "https://github.com/Afiefanugrah/Sistem-Blog-Sederhana-dengan-Node.js-dan-Express#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }
