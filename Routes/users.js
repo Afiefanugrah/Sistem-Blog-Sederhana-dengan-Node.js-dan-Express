@@ -8,5 +8,12 @@ router.get('/', async (req, res) => {
   })
 })
 
+router.post('/', async (req, res) => {
+  const {username, password} = req.body
+  res.json({
+    data: {username, password},
+    metadata: "users endpoint"
+  })
+})
 
 module.exports = router
