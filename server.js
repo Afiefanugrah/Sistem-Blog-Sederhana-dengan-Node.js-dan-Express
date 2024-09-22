@@ -4,6 +4,7 @@ const port = 3300
 const userEnpoind = require('./Routes/users')
 
 const app = express()
+app.use(express.json())
 
 app.use('/', userEnpoind)
 
