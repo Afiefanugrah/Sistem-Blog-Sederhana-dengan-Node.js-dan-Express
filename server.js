@@ -1,7 +1,7 @@
 const express = require('express')
 const port = 3300
 
-const userEnpoind = require('./Routes/users')
+const userEnpoind = require('./Routes/usersRoutes')
 
 const app = express()
 app.use(express.json())
