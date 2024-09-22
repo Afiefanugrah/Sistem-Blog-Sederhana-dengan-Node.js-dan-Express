@@ -4,7 +4,8 @@
   "description": "Sistem Blog Sederhana dengan Node.js dan Express",
   "main": "server.js",
   "scripts": {
-    "test": "express"
+    "test": "express",
+    "api": "node server.js"
   },
   "repository": {
     "type": "git",
