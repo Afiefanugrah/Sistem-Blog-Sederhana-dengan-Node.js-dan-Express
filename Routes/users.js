@@ -16,4 +16,12 @@ router.post('/', async (req, res) => {
   })
 })
 
+router.post('/login', async (req, res) => {
+  const {username, password} = req.body
+  res.json({
+    data: {username, password},
+    metadata: "login endpoint"
+  })
+})
+
 module.exports = router
