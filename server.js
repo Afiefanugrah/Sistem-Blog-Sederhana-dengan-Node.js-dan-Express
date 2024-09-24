@@ -1,6 +1,8 @@
 const express = require('express')
 const port = 3300
 
+const sequelize = require('./db.config')
+
 const userEnpoind = require('./Routes/usersRoutes')
 
 const app = express()
