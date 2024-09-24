@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
-const port = 3300
+require('dotenv').config()
+const port = process.env.port
 
 const sequelize = require('./db.config')
 sequelize.sync().then(() => console.log("database ready"))
