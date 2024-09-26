@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const usersModel = require('../Models/usersModel')
+const { where } = require('sequelize')
 
 router.get('/', async (req, res) => {
   const users = await usersModel.findAll()
@@ -21,15 +22,13 @@ router.post('/register', async (req, res) => {
   })
 })
 
-router.put('/update', async (req, res) => {
+router.put('/', async (req, res) => {
   const {username, password, passwordBaru} = req.body
-  const useData = await usersModel.findOne({where : {username: username}})
-  // res.json(useData)
+  const userData = await usersModel.findOne({where : {username:  username}})
   if (userData === true) {
     const user = await usersModel.update({
-      username, password,  passwordBaru
+      password: passwordBaru
     }, {where: {username: username}})
-
     res.json({
       data: user,
       metadata: "users endpoint"
