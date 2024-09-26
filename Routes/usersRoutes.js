@@ -34,15 +34,10 @@ router.put('/update', async (req, res) => {
       data: user,
       metadata: "users endpoint"
     })
-  } else {
-    res.json({
-      error: "data invalid"
-    })
   }
   res.json({
     error: "data invalid"
   })
-
 })
 
 router.post('/login', async (req, res) => {
