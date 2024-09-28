@@ -8,3 +8,5 @@ router.get('/', async (req, res) => {
     metadata: "blog endpoint"
   })
 })
+
+module.exports = router
