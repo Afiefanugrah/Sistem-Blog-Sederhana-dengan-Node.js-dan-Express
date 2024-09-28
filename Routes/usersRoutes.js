@@ -17,7 +17,7 @@ router.post('/register', async (req, res) => {
   const user = await usersModel.create({
     username, password: passwordBcrypt
   })
-  res.json({
+  res.status(201).json({
     data: user,
     metadata: "users endpoint"
   })
