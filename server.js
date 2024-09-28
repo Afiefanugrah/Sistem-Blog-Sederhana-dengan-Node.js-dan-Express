@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 require('dotenv').config()
+const session = require('express-session');
 const port = process.env.port
 
 const sequelize = require('./db.config')
@@ -12,6 +13,13 @@ const blogEnpoind = require('./Routes/blogRoutes')
 const app = express()
 app.use(cors())
 app.use(express.json())
+// Setup session middleware
+app.use(session({
+  secret: 'your-secret-key',  // Ganti dengan secret yang aman
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }    // Set 'true' jika menggunakan HTTPS
+}));
 // app.use(express.static('public'))
 
 // app.get('/', (req, res) => {

@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const usersModel = require('../Models/usersModel')
 const bcrypt = require('bcrypt')
+const usersModel = require('../Models/usersModel')
 
 router.get('/', async (req, res) => {
   const users = await usersModel.findAll()
@@ -46,6 +46,10 @@ router.post('/login', async (req, res) => {
   const passCompare = await bcrypt.compare(password, userData.password)
   // res.json(passCompare)
   if(passCompare === true) {
+    req.session.user = {
+      id: userData.id,
+      username: userData.username
+    }
     res.json({
       data: userData,
       metadata: "login endpoint"
