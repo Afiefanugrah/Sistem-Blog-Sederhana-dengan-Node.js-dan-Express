@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="/login" method="POST">
+        <form id="loginForm">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -21,6 +21,54 @@
             <button type="submit" class="login-button">Login</button>
             <p class="signup-link">Don't have an account? <a href="/register">Sign Up</a></p>
         </form>
+
+        <div id="responseMessage"></div>
+
     </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const responseMessage = document.getElementById('responseMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Mencegah form di-reload
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                // Kirim data ke backend menggunakan fetch
+                const response = await fetch('http://localhost:3300/users/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password,
+                    }),
+                });
+
+                const result = await response.json();
+
+                // Tampilkan hasil respon dari backend
+                if (response.ok) {
+                    if (result.error) {
+                        responseMessage.textContent = result.error;
+                        responseMessage.style.color = 'red';
+                    } else {
+                        responseMessage.textContent = 'Login successful! Welcome, ' + result.data.username;
+                        responseMessage.style.color = 'green';
+                    }
+                } else {
+                    responseMessage.textContent = 'Login failed. Please try again.';
+                    responseMessage.style.color = 'red';
+                }
+            } catch (error) {
+                responseMessage.textContent = 'An error occurred: ' + error.message;
+                responseMessage.style.color = 'red';
+            }
+        });
+    </script>
 </body>
 </html>

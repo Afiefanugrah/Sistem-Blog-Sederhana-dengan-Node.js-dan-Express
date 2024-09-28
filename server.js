@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/register.html');
+});
+
 
 app.use('/users', userEnpoind)
 
