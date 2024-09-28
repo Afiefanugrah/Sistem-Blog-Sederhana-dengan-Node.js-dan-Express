@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const usersModel = require('../Models/usersModel')
-const { where } = require('sequelize')
+const bcrypt = require('bcrypt')
 
 router.get('/', async (req, res) => {
   const users = await usersModel.findAll()
@@ -13,8 +13,9 @@ router.get('/', async (req, res) => {
 
 router.post('/register', async (req, res) => {
   const {username, password} = req.body
+  const passwordBcrypt = await bcrypt.hash(password, 10)
   const user = await usersModel.create({
-    username, password
+    username, password: passwordBcrypt
   })
   res.json({
     data: user,
