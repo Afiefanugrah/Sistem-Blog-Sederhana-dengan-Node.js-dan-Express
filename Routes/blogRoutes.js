@@ -25,6 +25,16 @@ router.post('/posts', async (req, res) => {
   })
 })
 
+router.get('/posts/:id', async (req, res) => {
+  const {id} = req.params
+  const blog = await blogModel.findByPk(id)
+  // res.json(blog)
+  res.json({
+    data: "blog",
+    metadata: "creat endpoint"
+  })
+})
+
 
 
 module.exports = router
