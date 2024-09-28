@@ -42,10 +42,13 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   const {username, password} = req.body
-  res.json({
-    data: {username, password},
-    metadata: "login endpoint"
-  })
+  const userData = await usersModel.findOne({where: {username: username}})
+  const passCompare = await bcrypt.compare(password, userData.password)
+  res.json(passCompare)
+  // res.json({
+  //   data: {username, password},
+  //   metadata: "login endpoint"
+  // })
 })
 
 module.exports = router
