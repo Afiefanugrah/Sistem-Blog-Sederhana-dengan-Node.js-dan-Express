@@ -10,10 +10,18 @@ router.get('/', async (req, res) => {
   })
 })
 
-router.get('/', async (req, res) => {
+router.post('/posts', async (req, res) => {
+  const loggedInUser = req.session.user
+  const { title ,content } = req.body
+  if(!loggedInUser) {
+    return res.status(401).json({ error: "seson invalid" });
+  }
+  const x = await blogModel.create({
+    title, content, UserId: loggedInUser.id
+  })
   res.json({
     data: "tes",
-    metadata: "blog endpoint"
+    metadata: "creat endpoint"
   })
 })
 
