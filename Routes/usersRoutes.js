@@ -44,11 +44,17 @@ router.post('/login', async (req, res) => {
   const {username, password} = req.body
   const userData = await usersModel.findOne({where: {username: username}})
   const passCompare = await bcrypt.compare(password, userData.password)
-  res.json(passCompare)
-  // res.json({
-  //   data: {username, password},
-  //   metadata: "login endpoint"
-  // })
+  // res.json(passCompare)
+  if(passCompare === true) {
+    res.json({
+      data: userData,
+      metadata: "login endpoint"
+    })
+  } else {
+    res.json({
+      error: "data invalid"
+    })
+  }
 })
 
 module.exports = router
