@@ -28,11 +28,14 @@ router.post('/posts', async (req, res) => {
 router.get('/posts/:id', async (req, res) => {
   const {id} = req.params
   const blog = await blogModel.findByPk(id)
-  // res.json(blog)
-  res.json({
-    data: "blog",
-    metadata: "creat endpoint"
-  })
+  if(blog) {
+    res.json({
+      data: blog,
+      metadata: "blog by id endpoint"
+    })
+  } else{
+    res.json({error: "data invalid"})
+  }
 })
 
 
