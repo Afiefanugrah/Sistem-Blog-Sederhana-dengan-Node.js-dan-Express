@@ -15,21 +15,11 @@ app.use(cors())
 app.use(express.json())
 // Setup session middleware
 app.use(session({
-  secret: 'your-secret-key',  // Ganti dengan secret yang aman
+  secret: 'a7V8N9lMfQ2X0hZrT4W6sJ5xG1L3uK8o',  // Ganti dengan secret yang aman
   resave: false,
   saveUninitialized: false,
   cookie: { secure: false }    // Set 'true' jika menggunakan HTTPS
 }));
-// app.use(express.static('public'))
-
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/public/index.html');
-// });
-
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/public/register.html');
-// });
-
 
 app.use('/users', userEnpoind)
 app.use('/blog', blogEnpoind)
