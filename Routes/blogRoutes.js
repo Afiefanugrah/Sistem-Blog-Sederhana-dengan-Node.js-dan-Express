@@ -4,8 +4,9 @@ const bcrypt = require('bcrypt')
 const blogModel = require('../Models/blogModel')
 
 router.get('/', async (req, res) => {
+  const blogs = await blogModel.findAll()
   res.json({
-    data: "tes",
+    data: blogs,
     metadata: "blog endpoint"
   })
 })
@@ -28,17 +29,22 @@ router.post('/posts', async (req, res) => {
 router.get('/posts/:id', async (req, res) => {
   const {id} = req.params
   const blog = await blogModel.findByPk(id)
-  if(blog) {
-    res.json({
-      data: blog,
-      metadata: "blog by id endpoint"
-    })
-  } else{
-    res.json({error: "data invalid"})
+  const loggedInUser = req.session.user
+  if(!loggedInUser) {
+    return res.status(401).json({ error: "seson invalid" });
   }
+  res.json(loggedInUser)
+  // if(blog) {
+  //   res.json({
+  //     data: blog,
+  //     metadata: "blog by id endpoint"
+  //   })
+  // } else{
+  //   res.json({error: "data invalid"})
+  // }
 })
 
-router.get('/posts/:id', async (req, res) => {
+router.put('/posts/:id', async (req, res) => {
   const {id} = req.params
   const blog = await blogModel.findByPk(id)
   if(blog) {
