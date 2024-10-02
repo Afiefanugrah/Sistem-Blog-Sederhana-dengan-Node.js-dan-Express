@@ -44,20 +44,7 @@ router.get('/posts/:id', async (req, res) => {
   }
 })
 
-router.put('/posts/:id', async (req, res) => {
-  const {id} = req.params
-  const blog = await blogModel.findByPk(id)
-  if(blog) {
-    res.json({
-      data: blog,
-      metadata: "blog by id endpoint"
-    })
-  } else{
-    res.json({error: "data invalid"})
-  }
-})
-
-router.put('/posts/:id', async (req, res) => {
+router.delete('/posts/:id', async (req, res) => {
   const {id} = req.params
   const blog = await blogModel.findByPk(id)
   if(blog) {
