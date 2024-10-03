@@ -2,3 +2,5 @@
 
 
 npm init
+
+npm run api
