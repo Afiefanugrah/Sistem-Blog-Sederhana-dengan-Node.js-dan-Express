@@ -1,10 +1,8 @@
 # Sistem-Blog-Sederhana-dengan-Node.js-dan-Express
 
 
-> run api
 
-npm run
-
+cara running
 
 `npm run`
 
