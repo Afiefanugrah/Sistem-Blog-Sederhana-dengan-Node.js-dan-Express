@@ -1,6 +1,11 @@
 # Sistem-Blog-Sederhana-dengan-Node.js-dan-Express
 
 
-npm init
+> run api
 
-npm run api
+npm run
+
+
+`npm run`
+
+run api
