@@ -1,9 +1,6 @@
 # Sistem-Blog-Sederhana-dengan-Node.js-dan-Express
 
 
+cara jalankan aplikasi
 
-cara running
-
-`npm run`
-
-run api
+> npm run api
