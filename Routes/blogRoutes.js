@@ -33,9 +33,7 @@ router.put('/posts/:id', async (req, res) => {
   if(!loggedInUser) {
     return res.status(401).json({ error: "session invalid" });
   }
-  // res.json(loggedInUser.id)
   const blog = await blogModel.findByPk(id)
-
   if(blog && blog.UserId === loggedInUser.id) {
     const update = await blogModel.update({
       title, content
