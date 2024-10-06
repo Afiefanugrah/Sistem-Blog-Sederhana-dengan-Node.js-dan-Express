@@ -17,12 +17,12 @@ router.post('/posts', async (req, res) => {
   if(!loggedInUser) {
     return res.status(401).json({ error: "seson invalid" });
   }
-  const x = await blogModel.create({
+  const datanew = await blogModel.create({
     title, content, UserId: loggedInUser.id
   })
   res.json({
-    data: "tes",
-    metadata: "creat endpoint"
+    data: datanew,
+    metadata: "creat berita sukses"
   })
 })
 
