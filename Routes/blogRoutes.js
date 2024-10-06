@@ -28,11 +28,15 @@ router.post('/posts', async (req, res) => {
 
 router.put('/posts/:id', async (req, res) => {
   const {id} = req.params
-  const blog = await blogModel.findByPk(id)
   const {title, content} = req.body
+
+  const blog = await blogModel.findByPk(id)
   if(blog) {
+    const update = await blogModel.update({
+      title, content
+    }, {where: {id: id}})
     res.json({
-      data: blog,
+      update:  [update],
       metadata: "blog by id endpoint"
     })
   } else{
