@@ -43,8 +43,10 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   const {username, password} = req.body
   const userData = await usersModel.findOne({where: {username: username}})
+  if(userData === null) {
+    return res.status(401).json({ error: "seson invalid" });
+  }
   const passCompare = await bcrypt.compare(password, userData.password)
-  // res.json(passCompare)
   if(passCompare === true) {
     req.session.user = {
       id: userData.id,
