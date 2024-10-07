@@ -43,14 +43,17 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   const {username, password} = req.body
-  const userData = await usersModel.findOne({where: {username: username}})
+  // const userData = await usersModel.findOne({where: {username: username}})
   // const check = await passwordCheck(username, password)
-  const passCompare = await bcrypt.compare(password, userData.password)
-  if(passCompare === true) {
-    req.session.user = {
-      id: userData.id,
-      username: userData.username
-    }
+  // const passCompare = await bcrypt.compare(password, userData.password)
+  // if(passCompare === true) {
+  const check = await passwordCheck(username, password)
+  // res.json(check)
+  if(check.compare === true) {
+    // req.session.user = {
+    //   id: userData.id,
+    //   username: userData.username
+    // }
     res.json({
       data: userData,
       metadata: "login endpoint"
