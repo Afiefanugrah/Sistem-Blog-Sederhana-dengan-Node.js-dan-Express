@@ -50,11 +50,15 @@ router.put('/posts/:id', async (req, res) => {
 
 router.delete('/delete/:id', async (req, res) => {
   const {id} = req.params
+  const loggedInUser = req.session.user
   const blog = await blogModel.findByPk(id)
-  const dataDelete = await blogModel.destroy({
-    where: {id: blog.id}
-  })
-  if(dataDelete) {
+  if(!loggedInUser) {
+    return res.status(401).json({ error: "session invalid" });
+  }
+  if(blog && blog.UserId === loggedInUser.id) {
+    const dataDelete = await blogModel.destroy({
+      where: {id: blog.id}
+    })
     res.json({
       data: dataDelete,
       metadata: "Delete by id suskses"
