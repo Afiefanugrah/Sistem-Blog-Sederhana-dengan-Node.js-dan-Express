@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bcrypt = require('bcrypt')
 const usersModel = require('../Models/usersModel')
+const passwordCheck = require('../utils/passswordCheck')
 
 router.get('/', async (req, res) => {
   const users = await usersModel.findAll()
@@ -43,7 +44,8 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   const {username, password} = req.body
   const userData = await usersModel.findOne({where: {username: username}})
-  if(userData === null) {
+  // const check = await passwordCheck(username, password)
+  if(check.userData === null) {
     return res.status(401).json({ error: "seson invalid" });
   }
   const passCompare = await bcrypt.compare(password, userData.password)
