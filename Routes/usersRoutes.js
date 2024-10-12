@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
   })
 })
 
+
 router.post('/register', async (req, res) => {
   const {username, password} = req.body
   const passwordBcrypt = await bcrypt.hash(password, 10)
@@ -43,17 +44,18 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   const {username, password} = req.body
-  // const userData = await usersModel.findOne({where: {username: username}})
+  const userData = await usersModel.findOne({where: {username: username}})
   // const check = await passwordCheck(username, password)
-  // const passCompare = await bcrypt.compare(password, userData.password)
-  // if(passCompare === true) {
-  const check = await passwordCheck(username, password)
+  const passCompare = await bcrypt.compare(password, userData.password)
+  if(passCompare === true) {
+  // const check = await passwordCheck(username, password)
   // res.json(check)
-  if(check.compare === true) {
-    // req.session.user = {
-    //   id: userData.id,
-    //   username: userData.username
-    // }
+  // if(check.compare === true) {
+    req.session.user = {
+      id: userData.id,
+      username: userData.username
+    }
+    req.session.cookie
     res.json({
       data: userData,
       metadata: "login endpoint"
@@ -64,5 +66,12 @@ router.post('/login', async (req, res) => {
     })
   }
 })
+
+
+router.get('/session-info', (req, res) => {
+  // Menampilkan informasi sesi
+  res.send(`Sesi User: ${req.session.user.username || 'Tidak ada sesi'}`);
+});
+
 
 module.exports = router
