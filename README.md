@@ -1,15 +1,27 @@
 # Sistem-Blog-Sederhana-dengan-Node.js-dan-Express
 
-cara jalankan aplikasi
+## Fitur
 
-> npm run api
+* Mendaftarkan pengguna baru dengan kata sandi yang di-hash
+* Autentikasi pengguna melalui login
+* Menyimpan data pengguna dalam file JSON
+* Menangani permintaan dan respons dalam format JSON
 
+## Persyaratan
+
+* Node.js (v12 atau lebih tinggi)
+* NPM (v6 atau lebih tinggi)
 
 ## Setup
 
-1. **Kloning repositori:**
 
-   <pre><div dir="auto"><div dir="auto">bash</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>git clone https://github.com/Afiefanugrah/Sistem-Blog-Sederhana-dengan-Node.js-dan-Express.git
-   cd (name repo)
-   </code></div></div></pre>
-2.
+
+1. **Kloning repositori:**
+<pre><div dir="auto"><div dir="auto">bash</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>git clone 
+cd</code></div></div></pre>
+
+
+2. **Instal dependensi:**
+   bash
+   Salin kode
+   npm install
