@@ -26,3 +26,28 @@ cd</code></div></div></pre>
 3. **runing**
    bash
    npm run api
+
+
+
+## API Endpoints
+
+### 1. **GET `/users`** - Mendapatkan semua pengguna
+
+**Deskripsi:**
+
+* Rute ini mengambil daftar pengguna yang telah terdaftar.
+
+**Permintaan:**
+
+* Metode: `GET`
+* URL: `/users`
+
+**Respons:**
+
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "data": [ /* Daftar pengguna */ ],
+   "metadata": "halaman awal"
+}
+</code></div></div></pre>
+
+
