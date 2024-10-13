@@ -26,6 +26,8 @@ cd</code></div></div></pre>
 3. **runing**
    bash
    npm run api
+npm 
+Server akan berjalan di http://localhost:3300.
 
 
 
@@ -50,4 +52,26 @@ cd</code></div></div></pre>
 }
 </code></div></div></pre>
 
+### 2. **POST `/register`** - Menambahkan user
 
+**Deskripsi:**
+
+* Rute ini daftar pengguna baru.
+
+**Permintaan:**
+
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "data": [ /* Daftar pengguna */ ],
+   "metadata": "halaman awal"
+}
+</code></div></div></pre>
+
+**Respons:**
+
+* Metode: `POST`
+* URL: `/users/register`
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "username": "string",
+   "password": "string",
+}
+</code></div></div></pre>
