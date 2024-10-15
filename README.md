@@ -46,7 +46,7 @@ cd</code></div></div></pre>
 
 <pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
    "data": [ /* Daftar pengguna */ ],
-   "metadata": "halaman awal"
+   "metadata": "users endpoint"
 }
 </code></div></div></pre>
 
