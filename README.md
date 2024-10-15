@@ -74,3 +74,18 @@ cd</code></div></div></pre>
    "metadata": "login endpoint"
 }
 </code></div></div></pre>
+
+### 3. **Get `/blog`**  - Mendapatkan semua blogs
+
+**Deskripsi**
+
+* Rute ini mengambil daftar blogs yang telah di masukan.
+
+**permintaan**
+
+* Metode: `GET`
+* URL: `/blogs`
+
+**Respons**
+
+<pre></pre>
