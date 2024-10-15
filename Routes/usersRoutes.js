@@ -58,7 +58,7 @@ router.post('/login', async (req, res) => {
     req.session.cookie
     res.json({
       data: userData,
-      metadata: "login endpoint"
+      metadata: "endpoint login"
     })
   } else {
     res.json({
