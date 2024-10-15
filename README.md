@@ -88,4 +88,8 @@ cd</code></div></div></pre>
 
 **Respons**
 
-<pre></pre>
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "data": [ /* Daftar blogs */ ],
+   "metadata": "blogs endpoint"
+}
+</code></div></div></pre>
