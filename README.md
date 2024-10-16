@@ -84,7 +84,7 @@ cd</code></div></div></pre>
 **permintaan**
 
 * Metode: `GET`
-* URL: `/blogs`
+* URL: `/blog`
 
 **Respons**
 
