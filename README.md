@@ -122,7 +122,7 @@ cd</code></div></div></pre>
 }
 </code></div></div></pre>
 
-### 4. **POST `/posts/:id`**  - Mendapatkan semua blogs
+### 5. **POST `/posts/:id`**  - Mendapatkan semua blogs
 
 **Deskripsi**
 
@@ -130,7 +130,7 @@ cd</code></div></div></pre>
 
 **permintaan**
 
-* Metode: `/post`
+* Metode: `POST`
 * URL: `/blog/posts/:id`
 
 <pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
@@ -155,7 +155,7 @@ cd</code></div></div></pre>
 
 **permintaan**
 
-* Metode: `/delete`
+* Metode: `DELETE`
 * URL: `/blog/delete/:id`
 
 **Respons**
