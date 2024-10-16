@@ -94,7 +94,7 @@ cd</code></div></div></pre>
 }
 </code></div></div></pre>
 
-### 3. **POST `/posts/:id`**  - Mendapatkan semua blogs
+### 4. **POST `/posts/:id`**  - Mendapatkan semua blogs
 
 **Deskripsi**
 
