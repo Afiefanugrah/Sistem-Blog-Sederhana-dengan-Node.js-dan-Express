@@ -75,7 +75,7 @@ cd</code></div></div></pre>
 }
 </code></div></div></pre>
 
-### 3. **Get `/blog`**  - Mendapatkan semua blogs
+### 3. **GET `/blog`**  - Mendapatkan semua blogs
 
 **Deskripsi**
 
@@ -91,6 +91,34 @@ cd</code></div></div></pre>
 <pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
    "data": [ /* Daftar blogs */ ],
    "metadata": "blogs endpoint"
+}
+</code></div></div></pre>
+
+### 4. **POST `/posts`** - Menambahkan user
+
+**Deskripsi:**
+
+* Rute ini daftar pengguna baru.
+
+**Permintaan:**
+
+* Metode: `POST`
+* URL: `/blog/posts`
+
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "username": "string",
+   "password": "string",
+}
+</code></div></div></pre>
+
+**Respons:**
+
+* Metode: `POST`
+* URL: `/users/register`
+
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "data": [ /* pengguna baru */ ],
+   "metadata": "creat berita sukses"
 }
 </code></div></div></pre>
 
