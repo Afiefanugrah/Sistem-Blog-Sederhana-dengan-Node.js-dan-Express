@@ -93,3 +93,28 @@ cd</code></div></div></pre>
    "metadata": "blogs endpoint"
 }
 </code></div></div></pre>
+
+### 3. **POST `/posts/:id`**  - Mendapatkan semua blogs
+
+**Deskripsi**
+
+* Rute memasukan berita baru by user.
+
+**permintaan**
+
+* Metode: `/post`
+* URL: `/blog/posts/:id`
+
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "title": "string",
+   "content": "string",
+}
+</code></div></div></pre>
+
+**Respons**
+
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "data": [ /* blogs new */ ],
+   "metadata": "blog endpoint"
+}
+</code></div></div></pre>
