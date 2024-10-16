@@ -118,3 +118,24 @@ cd</code></div></div></pre>
    "metadata": "blog endpoint"
 }
 </code></div></div></pre>
+
+### 5. **DELETE `/delete/:id`**  - Mendapatkan semua blogs
+
+**Deskripsi**
+
+* Rute memasukan berita baru by user.
+
+**permintaan**
+
+* Metode: `/delete`
+* URL: `/blog/delete/:id`
+
+**Respons**
+
+<pre><div dir="auto"><div dir="auto">json</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>{
+   "data": [ /* data delete*/ ],
+   "metadata": "Delete by id suskses"
+}
+</code></div></div></pre>
+
+
