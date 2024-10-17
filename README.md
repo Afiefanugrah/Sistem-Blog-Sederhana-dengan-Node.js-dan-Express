@@ -20,8 +20,7 @@
 cd</code></div></div></pre>
 
 2. **Instal dependensi:**
-   bash
-   Salin kode
+   ```bash
    npm install
 3. **runing**
    bash
