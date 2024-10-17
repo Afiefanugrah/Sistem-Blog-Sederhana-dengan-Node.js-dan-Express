@@ -15,15 +15,15 @@
 ## Setup
 
 1. **Kloning repositori:**
-   ```bash
+   ````bash
    git clone nama_repositori
    cd nama_repositori
 
 2. **Instal dependensi:**
-   ```bash
+   ````bash
    npm install
 3. **runing**
-   ```bash
+   ````bash
    npm run api
 
    Server akan berjalan di http://localhost:3300.
