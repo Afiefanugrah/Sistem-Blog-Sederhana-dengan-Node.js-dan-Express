@@ -19,19 +19,13 @@
    git clone nama_repositori
    cd nama_repositori
 
-
-```<pre><div dir="ltr"><code>
-git clone 
-cd
-</code></div></pre>
-
 2. **Instal dependensi:**
    ```bash
    npm install
 3. **runing**
-   bash
+   ```bash
    npm run api
-   npm
+
    Server akan berjalan di http://localhost:3300.
 
 ## API Endpoints
