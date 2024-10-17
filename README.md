@@ -15,6 +15,9 @@
 ## Setup
 
 1. **Kloning repositori:**
+   ```bash
+   git clone nama_repositori
+   cd nama_repositori
 
 <pre><div dir="auto"><div dir="auto">bash</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>git clone 
 cd</code></div></div></pre>
