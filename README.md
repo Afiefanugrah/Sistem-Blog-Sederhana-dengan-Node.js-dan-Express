@@ -19,9 +19,11 @@
    git clone nama_repositori
    cd nama_repositori
 
-<pre><div dir="auto"><div dir="auto"><div dir="auto"><div dir="auto"><span>```bash</span></div></div></div><div dir="ltr"><code>
+
+<pre><div dir="ltr">```bash<code>
 git clone 
-cd</code></div></div></pre>
+cd
+</code></div></pre>
 
 2. **Instal dependensi:**
    ```bash
