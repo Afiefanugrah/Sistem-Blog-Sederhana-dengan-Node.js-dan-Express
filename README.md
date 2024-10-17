@@ -20,7 +20,7 @@
    cd nama_repositori
 
 
-<pre><div dir="ltr">```bash<code>
+```<pre><div dir="ltr"><code>
 git clone 
 cd
 </code></div></pre>
