@@ -19,7 +19,8 @@
    git clone nama_repositori
    cd nama_repositori
 
-<pre><div dir="auto"><div dir="auto">bash</div><div dir="auto"><div dir="auto"><div dir="auto"><span>Salin kode</span></div></div></div><div dir="ltr"><code>git clone 
+<pre><div dir="auto"><div dir="auto"><div dir="auto"><div dir="auto"><span>```bash</span></div></div></div><div dir="ltr"><code>
+git clone 
 cd</code></div></div></pre>
 
 2. **Instal dependensi:**
