@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
   }
 })
 
-
+// testing session
 router.get('/session-info', (req, res) => {
   // Menampilkan informasi sesi
   res.send(`Sesi User: ${req.session.user.username || 'Tidak ada sesi'}`);
