@@ -23,10 +23,10 @@
    ````bash
    npm install
 3. **runing**
+   Server akan berjalan di http://localhost:3300.
    ````bash
    npm run api
 
-   Server akan berjalan di http://localhost:3300.
 
 ## API Endpoints
 
