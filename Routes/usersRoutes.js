@@ -25,23 +25,6 @@ router.post('/register', async (req, res) => {
   })
 })
 
-// router.put('/', async (req, res) => {
-//   const {username, password, passwordBaru} = req.body
-//   const userData = await usersModel.findOne({where : {username:  username}})
-//   if (userData === true) {
-//     const user = await usersModel.update({
-//       password: passwordBaru
-//     }, {where: {username: username}})
-//     res.json({
-//       data: user,
-//       metadata: "users endpoint"
-//     })
-//   }
-//   res.json({
-//     error: "data invalid"
-//   })
-// })
-
 router.post('/login', async (req, res) => {
   const {username, password} = req.body
   const userData = await usersModel.findOne({where: {username: username}})
