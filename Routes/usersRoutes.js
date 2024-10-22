@@ -35,7 +35,7 @@ router.post('/login', async (req, res) => {
     req.session.user = ({
       // id: userData.id,
       id: check.userData,
-      // username: userData.username
+      username: check.userData.username
     })
     req.session.cookie
     res.json({
