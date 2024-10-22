@@ -32,10 +32,11 @@ router.post('/login', async (req, res) => {
   // const passCompare = await bcrypt.compare(password, userData.password)
   // if(passCompare === true) {
   if(check.compare === true) {
-    req.session.user = {
+    req.session.user = ({
       // id: userData.id,
-      username: userData.username
-    }
+      id: check.userData,
+      // username: userData.username
+    })
     req.session.cookie
     res.json({
       data: userData,
